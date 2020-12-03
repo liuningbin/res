@@ -5,15 +5,10 @@ const app = getApp()
 Page({
   data: {
     res_list:[],
-    latitude:{},
-    longitude:{}
+    address:{}
   },
 
   onLoad: function () {
-    wx.setNavigationBarTitle({
-      title: '新海科技集团有限公司高新区',
-    })
-
     this.setData({
       res_list:datas.list_data,
     })
@@ -44,15 +39,24 @@ Page({
             location:latitude+','+longitude,
             key:'AWWBZ-H3CWX-M454Z-TJAFJ-24UHK-IXBRL',
           },
-          success:function(res){
-            console.log(res)
+          success:(res)=>{
+            console.log(res.data.result.address)
+            this.setData({
+              address:res.data.result.address,
+            })
+            var add=JSON.stringify(this.data.address);
+            wx.setNavigationBarTitle({
+              title:add
+            })
           }
         })
-
         console.log(res.latitude)
         console.log(res.longitude)
       }
     })
+
+
+
   }
   // getUserInfo: function(e) {
   //   console.log(e)
