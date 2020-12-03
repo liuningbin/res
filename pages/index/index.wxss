@@ -1,0 +1,49 @@
+@import '/pages/template/template.wxss';
+
+.home{
+  background-color:     #FAFAFA;
+}
+
+.swiper{
+  width: 98%;
+  margin-left: 1%;
+}
+
+.item_01{
+  background-image: url('https://liuningbin.oss-cn-hangzhou.aliyuncs.com/liuningbin/images/swiper_item/swiper_01.png');
+  background-size: 100% 100%;
+}
+.item_02{
+  background-image: url('https://liuningbin.oss-cn-hangzhou.aliyuncs.com/liuningbin/images/swiper_item/swiper_02.png');
+  background-size: 100% 100%;
+}
+.item_03{
+  background-image: url('https://liuningbin.oss-cn-hangzhou.aliyuncs.com/liuningbin/images/swiper_item/swiper_03.png');
+  background-size: 100% 100%;
+}
+.item_04{
+  background-image: url('https://liuningbin.oss-cn-hangzhou.aliyuncs.com/liuningbin/images/swiper_item/swiper_04.png');
+  background-size: 100% 100%;
+}
+
+.item_05{
+  background-image: url('https://liuningbin.oss-cn-hangzhou.aliyuncs.com/liuningbin/images/swiper_item/swiper_05.png');
+  background-size: 100% 100%;
+} 
+
+.title{
+  width: 100%;
+  height: 80rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+  letter-spacing: 5rpx;
+  line-height: 90rpx;
+  margin-left: 20rpx;
+}
+
+.sortord{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around; 
+  line-height: 90rpx;
+}

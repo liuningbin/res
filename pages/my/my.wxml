@@ -1,0 +1,64 @@
+<!--pages/my/my.wxml-->
+<template></template>
+<view class="my">
+  <view class="my_head">
+    <view class="my_head1">
+        <image class="title_image" src="{{userInfo.avatarUrl}}" style="display:{{isShow?'block':'none'}}"></image>
+        <button  class="scope" bindgetuserinfo="handleGetUserInfo" open-type="getUserInfo"
+        style="display:{{isShow?'none':'block'}}">
+          <cover-image src="https://liuningbin.oss-cn-hangzhou.aliyuncs.com/liuningbin/icon/header.jpg" style="width:160rpx;height:160rpx;border-radius:80rpx;margin-left:15rpx;"></cover-image>
+        </button>
+    </view>
+    <view class="my_head2">
+      <view class="nickName">{{userInfo.nickName}}</view>
+      <view class="phone">电话:{{}}</view>
+    </view>
+  </view>
+  <view class="body">
+    <view id="body_item" class="">
+      <image  class="icon" src="/icon/balance.png"></image>
+      我的余额
+      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+    </view>
+    <view id="body_item" class="">
+      <image class="icon" src="/icon/red_packet.png"></image>
+      我的红包
+      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+    </view>
+    <view id="body_item" class="">
+      <image class="icon" src="/icon/voucher.png"></image>
+      代金券
+      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+    </view>
+    <view id="body_item" class="">
+      <image class="icon" src="/icon/allowance.png"></image>
+      津贴
+      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+    </view>
+    <view id="body_item" class="">
+      <image class="icon" src="/icon/address.png"></image>
+      我的地址
+      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+    </view>
+    <view id="body_item" class="">
+      <image class="icon" src="/icon/attention.png"></image>
+      我的关注
+      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+    </view>
+    <view id="body_item" class="">
+      <image class="icon" src="/icon/evaluate.png"></image>
+      我的评价
+      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+    </view>
+    <view id="body_item" class="">
+      <image class="icon" src="/icon/service.png"></image>
+      客服中心
+      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+    </view>
+    <view id="body_item" class="">
+      <image class="icon" src="/icon/help.png"></image>
+      帮助和反馈
+      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+    </view>
+  </view>
+</view>

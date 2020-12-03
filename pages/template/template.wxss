@@ -1,0 +1,48 @@
+.res_list{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 260rpx;
+  background-color: white;
+  margin-left: 5%;
+  margin-bottom: 10rpx;
+  border-radius: 30rpx;
+}
+
+.res_photo{
+  width: 200rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50rpx;
+}
+
+.res_picture{
+  width: 150rpx;
+  height: 100rpx;
+  border-radius: 16rpx;
+}
+
+.res_msg{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+.name{
+  line-height: 90rpx;
+  font-size: 39rpx;
+  font-weight: 600;
+}
+
+.grade{
+  display: flex;
+  flex-direction: row;
+  line-height: 60rpx;
+}
+
+.sales,.distance{
+  line-height: 40rpx;
+  margin-left: 60rpx;
+  font-size: 26rpx;
+}

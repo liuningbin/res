@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/list/list",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/template/template"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "是否允许小程序获取你的地理位置" 
+    }
+  },
+  "window":{
+    "navigationBarBackgroundColor":"#FFD700",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "首页",
+    "backgroundColor": "#ffffff"
+  },
+  "useExtendedLib":{
+      "weui": true
+    },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/icon/home.png",
+      "selectedIconPath": "/icon/select_home.png"
+    },
+  {
+    "pagePath": "pages/list/list",
+    "text": "订单",
+    "iconPath": "/icon/form.png",
+    "selectedIconPath": "/icon/select_form.png"
+  },{
+    "pagePath": "pages/my/my",
+    "text": "我的",
+    "iconPath": "/icon/my.png",
+    "selectedIconPath": "/icon/select_my.png"
+  }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

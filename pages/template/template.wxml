@@ -1,0 +1,11 @@
+<template name="res_list">
+  <view class="res_list">
+    <view class="res_photo"><image class="res_picture" src="{{res_picture}}"></image></view>
+    <view class="res_msg">
+      <view class="name">{{name}}</view>
+      <view class="grade"><image class="grade_img" src="https://liuningbin.oss-cn-hangzhou.aliyuncs.com/liuningbin/icon/grade.png" style="width:60rpx;height:60rpx;"></image>{{grade}}</view>
+      <view class="sales">月售{{sales}}</view>
+      <view class="distance">{{distance}}km</view>
+    </view>
+  </view>
+</template>

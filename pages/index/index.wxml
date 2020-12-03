@@ -1,0 +1,21 @@
+<import src="/pages/template/template.wxml"></import>
+<view class="home">
+  <view style="margin:8rpx;"><mp-searchbar bindselectresult="selectResult" search=""></mp-searchbar></view>
+  <swiper class="swiper" autoplay="ture" indicator-dots="ture">
+    <swiper-item class="item_01"></swiper-item>
+    <swiper-item class="item_02"></swiper-item>
+    <swiper-item class="item_03"></swiper-item>
+    <swiper-item class="item_04"></swiper-item>
+    <swiper-item class="item_05"></swiper-item>
+  </swiper>
+  <view class="title">附近商家</view>
+  <view class="sortord">
+    <view>综合排序</view>
+    <view>销量高</view>
+    <view>速度快</view>
+  </view>
+  <view wx:for='{{res_list}}' wx:key='*this'>
+    <template is="res_list" data="{{...item}}"></template>
+  </view>
+
+</view>
