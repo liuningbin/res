@@ -52,11 +52,8 @@ Page({
         })
         console.log(res.latitude)
         console.log(res.longitude)
-      }
+      },
     })
-
-
-
   }
   // getUserInfo: function(e) {
   //   console.log(e)

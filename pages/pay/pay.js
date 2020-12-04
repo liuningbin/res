@@ -1,52 +1,25 @@
-// pages/my/my.js
+// pages/pay/pay.js
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
-    userInfo:{},
-    isShow: false
-  },
 
+
+  data: {
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(this)
-    this.getUserInfo()
+
   },
 
-  getUserInfo(){
-    wx.getSetting({
-      success:(res)=>{
-        if(res.authSetting['scope.userInfo']){
-          this.setData({
-            isShow:true
-          })
-        }
-      }
-    })
-    wx.getUserInfo({
-      success:(res)=>{
-        console.log(res)
-        this.setData({
-          userInfo:res.userInfo
-        })
-      }
-    })
-  },
-
-  handleGetUserInfo(res){
-    console.log(res);
-    if(res.detail.rawData){
-      this.getUserInfo();
-    }
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+
   },
 
   /**
@@ -89,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  pay:function(){
+    wx.showActionSheet({
+      itemList: ['确定充值'],
+    })
   }
 })

@@ -4,7 +4,8 @@
     "pages/list/list",
     "pages/logs/logs",
     "pages/my/my",
-    "pages/template/template"
+    "pages/template/template",
+    "pages/pay/pay"
   ],
   "permission": {
     "scope.userLocation": {
@@ -13,7 +14,7 @@
   },
   "window":{
     "navigationBarBackgroundColor":"#FFD700",
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "white", 
     "navigationBarTitleText": "首页",
     "backgroundColor": "#ffffff"
   },

@@ -1,0 +1,26 @@
+<view class="pay">
+  <view class="row1">
+    <button bindtap="pay">
+    10
+  </button>
+  <button bindtap="pay">
+    20
+  </button>
+  </view>
+  <view class="row2">
+    <button bindtap="pay">
+    30
+  </button>
+  <button bindtap="pay">
+    50
+  </button>
+  </view>
+  <view class="row3">
+    <button bindtap="pay">
+    100
+  </button>
+  <button bindtap="pay">
+    200
+  </button>
+  </view>
+</view>

@@ -1,2 +1,15 @@
-<!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<view class="order_list">
+  <view class="order_list1">
+    <view class="order_photo"><image class="order_picture" src="https://liuningbin.oss-cn-hangzhou.aliyuncs.com/liuningbin/images/res_picture/%E7%9B%8A%E7%A6%BE%E5%A0%82.jpg"></image></view>
+    <view class="order_right">
+      <view class="res_name">益禾堂</view>
+      <view class="res_enter"><navigator><image class="enter" src="/icon/enter.png"></image></navigator></view>
+      <view class="order_state">已完成</view>
+    </view>
+  </view>
+  <view class="order_list2">
+    <view class="commodity">红茶冰激凌</view>
+    <view class="number">X1</view>
+  </view>
+  <view class="order_list3">共一件商品，实付￥6元</view>
+</view>
