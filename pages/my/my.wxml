@@ -23,42 +23,42 @@
     <view id="body_item" class="">
       <image class="icon" src="/icon/red_packet.png"></image>
       我的红包
-      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+      <navigator url="/pages/my/my" catchtap="closed"><image class="enter" src="/icon/enter.png"></image></navigator>
     </view>
     <view id="body_item" class="">
       <image class="icon" src="/icon/voucher.png"></image>
       代金券
-      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+      <navigator url="/pages/my/my" catchtap="closed"><image class="enter" src="/icon/enter.png"></image></navigator>
     </view>
     <view id="body_item" class="">
       <image class="icon" src="/icon/allowance.png"></image>
       津贴
-      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+      <navigator url="/pages/my/my" catchtap="closed"><image class="enter" src="/icon/enter.png"></image></navigator>
     </view>
     <view id="body_item" class="">
       <image class="icon" src="/icon/address.png"></image>
       我的地址
-      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+      <navigator url="/pages/my/my" catchtap="closed"><image class="enter" src="/icon/enter.png"></image></navigator>
     </view>
     <view id="body_item" class="">
       <image class="icon" src="/icon/attention.png"></image>
       我的关注
-      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+      <navigator url="/pages/my/my" catchtap="closed"><image class="enter" src="/icon/enter.png"></image></navigator>
     </view>
     <view id="body_item" class="">
       <image class="icon" src="/icon/evaluate.png"></image>
       我的评价
-      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+      <navigator url="/pages/my/my" catchtap="closed"><image class="enter" src="/icon/enter.png"></image></navigator>
     </view>
     <view id="body_item" class="">
       <image class="icon" src="/icon/service.png"></image>
       客服中心
-      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+      <navigator url="/pages/my/my" catchtap="closed"><image class="enter" src="/icon/enter.png"></image></navigator>
     </view>
     <view id="body_item" class="">
       <image class="icon" src="/icon/help.png"></image>
       帮助和反馈
-      <navigator><image class="enter" src="/icon/enter.png"></image></navigator>
+      <navigator url="/pages/my/my" catchtap="closed"><image class="enter" src="/icon/enter.png"></image></navigator>
     </view>
   </view>
 </view>

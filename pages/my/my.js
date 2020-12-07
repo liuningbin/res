@@ -13,7 +13,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(this)
     this.getUserInfo()
   },
 
@@ -21,27 +20,33 @@ Page({
     wx.getSetting({
       success:(res)=>{
         if(res.authSetting['scope.userInfo']){
+          wx.getUserInfo({
+            success:(res)=>{
+              this.setData({
+                userInfo:res.userInfo
+              })
+            }
+          });
           this.setData({
             isShow:true
           })
         }
       }
     })
-    wx.getUserInfo({
-      success:(res)=>{
-        console.log(res)
-        this.setData({
-          userInfo:res.userInfo
-        })
-      }
-    })
   },
 
   handleGetUserInfo(res){
-    console.log(res);
+    // console.log(res);
     if(res.detail.rawData){
+      console.log(res.detail.rawData)
       this.getUserInfo();
     }
+  },
+
+  closed:function(){
+    wx.showToast({
+      title: '功能暂未开放',
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -53,7 +58,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**
