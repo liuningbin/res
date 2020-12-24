@@ -6,7 +6,6 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     
-    this.login();
     wx.checkSession({
       success: (res) => {
         console.log(res,'登录未过期')
@@ -27,12 +26,15 @@ App({
   login(){
     wx.login({
       success: res => {
+        console.log("res.code"+res.code)
         if(res.code){
-          var appid="wxeba69d5bce2265cc";
-          var secret="e157914fc521a302b760cd37876807bd";
-          var code=res.code;
           wx.request({
-            url: 'https://api.weixin.qq.com/sns/jscode2session?appid='+appid+'&secret='+secret+'&js_code='+code+'&grant_type=authorization_code',
+            url: 'http://localhost:8080/useLogin',
+            method:'POST',
+            header:{
+              'content-type':'application/x-www-form-urlencoded'
+            },
+            data:{code:res.code},
             success: function(res){
               wx.setStorageSync('openid', res.data.openid);
             },
@@ -41,7 +43,7 @@ App({
 
         //获取微信运动步数
         wx.getSetting({
-          success:(res)=>{
+          success:(res)=>{1
             if(res.authSetting['scope.werun']){
               wx.getWeRunData({
                 success: (result) => {

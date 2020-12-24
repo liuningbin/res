@@ -1,5 +1,3 @@
-let datas=require('../../data/data.js');
-console.log(datas);
 const app = getApp()
 
 Page({
@@ -9,8 +7,18 @@ Page({
   },
 
   onLoad: function () {
-    this.setData({
-      res_list:datas.list_data,
+    wx.request({
+      url: 'http://localhost:8080/resList',
+      method:'POST',
+      header:{
+        'content-type':'application/x-www-form-urlencoded'
+      },
+      success: (res)=>{
+        console.log(res.data)
+        this.setData({
+          res_list:res.data
+        })
+      },
     })
 
     wx.getSetting({

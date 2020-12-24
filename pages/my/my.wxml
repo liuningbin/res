@@ -11,7 +11,7 @@
     </view>
     <view class="my_head2">
       <view class="nickName">{{userInfo.nickName}}</view>
-      <view class="phone">电话:{{}}</view>
+      <view class="gender">性别:{{userInfo.gender}}</view>
     </view>
   </view>
   <view class="body">

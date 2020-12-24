@@ -45,7 +45,7 @@
   margin-left: 40rpx;
 }
 
-.phone{
+.gender{
     margin-top: 36rpx;
     margin-left: 40rpx;
 }
