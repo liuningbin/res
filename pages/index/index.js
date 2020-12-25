@@ -2,8 +2,7 @@ const app = getApp()
 
 Page({
   data: {
-    res_list:[],
-    address:{}
+    res_list:[]
   },
 
   onLoad: function () {
@@ -26,41 +25,40 @@ Page({
         if(!res.authSetting['scope.userLocation']){
           wx.authorize({
             scope: 'scope.userLocation',
-            success(){
-              wx.startLocationUpdate() 
+            success:(res)=>{
+              wx.getLocation({
+                scope:'gcj02',
+                success:(res)=>{
+              wx.request({
+                url: 'http://localhost:8080/location',
+                method:'POST',
+                header:{
+                  'content-type':'application/x-www-form-urlencoded'
+                },
+                data:{
+                  openid:wx.getStorageSync('openid'),
+                  latitude:res.latitude,
+                  longitude:res.longitude
+                },
+                success:(res)=>{
+                  wx.setStorageSync('location', res.data.result.address)
+                    var add=JSON.stringify(wx.getStorageSync('location'));
+                    wx.setNavigationBarTitle({
+                      title:add
+                    })
+                },
+              })
+                },
+              })
             }
+          })
+        }else{
+          var add=JSON.stringify(wx.getStorageSync('location'));
+          wx.setNavigationBarTitle({
+            title:add
           })
         }
       }
-    })
-
-    wx.getLocation({
-      scope:'gcj02',
-      success:(res)=>{
-        var latitude=res.latitude;
-        var longitude=res.longitude;
-
-        wx.request({
-          url:'https://apis.map.qq.com/ws/geocoder/v1/',
-          type:'get',
-          data:{
-            location:latitude+','+longitude,
-            key:'AWWBZ-H3CWX-M454Z-TJAFJ-24UHK-IXBRL',
-          },
-          success:(res)=>{
-            console.log(res.data.result.address)
-            this.setData({
-              address:res.data.result.address,
-            })
-            var add=JSON.stringify(this.data.address);
-            wx.setNavigationBarTitle({
-              title:add
-            })
-          }
-        })
-        console.log(res.latitude)
-        console.log(res.longitude)
-      },
     })
   }
   // getUserInfo: function(e) {

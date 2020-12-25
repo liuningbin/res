@@ -5,7 +5,14 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-    
+
+    wx.getStorage({
+      key: 'openid',
+      success (res) {
+        console.log(res.data)
+      }
+    })
+
     wx.checkSession({
       success: (res) => {
         console.log(res,'登录未过期')
@@ -29,14 +36,15 @@ App({
         console.log("res.code"+res.code)
         if(res.code){
           wx.request({
-            url: 'http://localhost:8080/useLogin',
+            url: 'http://localhost:8080/userLogin',
             method:'POST',
             header:{
               'content-type':'application/x-www-form-urlencoded'
             },
             data:{code:res.code},
             success: function(res){
-              wx.setStorageSync('openid', res.data.openid);
+              console.log(res.data)
+              wx.setStorageSync('openid', res.data);
             },
           });
         }

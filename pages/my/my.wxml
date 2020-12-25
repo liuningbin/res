@@ -3,15 +3,15 @@
 <view class="my">
   <view class="my_head">
     <view class="my_head1">
-        <image class="title_image" src="{{userInfo.avatarUrl}}" style="display:{{isShow?'block':'none'}}"></image>
+        <image class="title_image" src="{{avatarUrl}}" style="display:{{isShow?'block':'none'}}"></image>
         <button  class="scope" bindgetuserinfo="handleGetUserInfo" open-type="getUserInfo"
         style="display:{{isShow?'none':'block'}}">
           <cover-image src="https://liuningbin.oss-cn-hangzhou.aliyuncs.com/liuningbin/icon/header.jpg" style="width:160rpx;height:160rpx;border-radius:80rpx;margin-left:15rpx;"></cover-image>
         </button>
     </view>
     <view class="my_head2">
-      <view class="nickName">{{userInfo.nickName}}</view>
-      <view class="gender">性别:{{userInfo.gender}}</view>
+      <view class="nickName">{{nickname}}</view>
+      <view class="gender">性别:{{sex}}</view>
     </view>
   </view>
   <view class="body">

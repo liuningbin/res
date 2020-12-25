@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo:{},
+    nickname:"",
+    sex:"",
+    avatarUrl:{},
     isShow: false
   },
 
@@ -22,12 +24,36 @@ Page({
         if(res.authSetting['scope.userInfo']){
           wx.getUserInfo({
             success:(res)=>{
-              this.setData({
-                userInfo:res.userInfo,
+              wx.request({
+                url: 'http://localhost:8080/userInfo',
+                method:'POST',
+                header:{
+                  'content-type':'application/x-www-form-urlencoded'
+                },
+                data:{
+                  openid:wx.getStorageSync('openid'),
+                  nickname:res.userInfo.nickName,
+                  gender:res.userInfo.gender,
+                  avatarUrl:res.userInfo.avatarUrl
+                },
+                success:(res)=>{
+                  console.log(res.data.nickname)
+                  wx.setStorageSync('nickname', res.data.nickname)
+                  wx.setStorageSync('sex', res.data.sex)
+                  wx.setStorageSync('avatarUrl', res.data.avatarUrl)
+                  this.setData({
+                    nickname:res.data.nickname,
+                    sex:res.data.sex,
+                    avatarUrl:res.data.avatarUrl
+                  })
+                }
               })
             }
           });
           this.setData({
+            nickname:wx.getStorageSync('nickname'),
+            sex:wx.getStorageSync('sex'),
+            avatarUrl:wx.getStorageSync('avatarUrl'),
             isShow:true
           })
         }
