@@ -1,25 +1,25 @@
 <view class="pay">
   <view class="row1">
-    <button bindtap="pay">
+    <button bindtap="pay" data-text="10">
     10
   </button>
-  <button bindtap="pay">
+  <button bindtap="pay" data-text="20">
     20
   </button>
   </view>
   <view class="row2">
-    <button bindtap="pay">
+    <button bindtap="pay" data-text="30">
     30
   </button>
-  <button bindtap="pay">
+  <button bindtap="pay" data-text="50">
     50
   </button>
   </view>
   <view class="row3">
-    <button bindtap="pay">
+    <button bindtap="pay" data-text="100">
     100
   </button>
-  <button bindtap="pay">
+  <button bindtap="pay" data-text="200">
     200
   </button>
   </view>

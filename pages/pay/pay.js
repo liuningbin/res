@@ -64,9 +64,34 @@ Page({
 
   },
 
-  pay:function(){
+  pay:function(e){
+    console.log(e.currentTarget.dataset.text)
     wx.showActionSheet({
       itemList: ['确定充值'],
+      success:function(res){
+        if(res.tapIndex==0){
+          console.log("确定充值")
+          wx.request({
+            url: 'http://localhost:8080/pay',
+            method:'POST',
+            header:{
+              'content-type':'application/x-www-form-urlencoded'
+            },
+            data:{
+              openid:wx.getStorageSync('openid'),
+              money:e.currentTarget.dataset.text
+            },
+            success:(res)=>{
+              wx.showToast({
+                title: '充值成功',
+              })
+            }
+          })
+        }
+      },
+      fail:function(res){
+        console.log("取消充值")
+      }
     })
   }
 })

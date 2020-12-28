@@ -12,6 +12,7 @@ Page({
       header:{
         'content-type':'application/x-www-form-urlencoded'
       },
+      data:{openid:wx.getStorageSync('openid')},
       success: (res)=>{
         console.log(res.data)
         this.setData({
