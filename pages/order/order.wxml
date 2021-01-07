@@ -1,0 +1,18 @@
+<view class="order_list" wx:for="{{order_list}}" wx:key='*this'>
+  <view class="order_list1">
+    <view class="order_photo"><image class="order_picture" src="{{item.res.resPhoto}}"></image></view>
+    <view class="order_right">
+      <view class="res_name">{{item.res.resName}}</view>
+      <view class="res_enter"><image class="enter" src="/icon/enter.png"></image></view>
+      <view class="order_state" wx:if="{{item.orderState==0}}">已下单</view>
+      <view class="order_state" wx:if="{{item.orderState==1}}">派送中</view>
+      <view class="order_state" wx:if="{{item.orderState==2}}">已完成</view>
+    </view>
+  </view>
+  <view class="order_list2" wx:for="{{item.orderItem}}"  wx:key='*this'>
+    <view class="commodity">{{item.food.foodName}}</view>
+    <view class="price">单价：{{item.food.foodPrice}}</view>
+    <view class="number">X{{item.foodNumber}}</view>
+  </view>
+  <view class="order_list3">实付￥{{item.totalPrice}}元</view>
+</view>

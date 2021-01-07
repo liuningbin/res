@@ -1,4 +1,5 @@
 <template name="res_list">
+  <navigator url="/pages/foodList/foodList?resId={{resId}}" open-type="navigate">
   <view class="res_list">
     <view class="res_photo"><image class="res_picture" src="{{resPhoto}}"></image></view>
     <view class="res_msg">
@@ -8,4 +9,5 @@
       <view class="distance">{{distance}}km</view>
     </view>
   </view>
+</navigator>
 </template>

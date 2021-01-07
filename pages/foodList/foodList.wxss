@@ -1,0 +1,99 @@
+.food_list{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 260rpx;
+  background-color: white;
+  margin-left: 5%;
+  margin-bottom: 10rpx;
+  border-radius: 30rpx;
+}
+
+.food_photo{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50rpx;
+}
+
+.food_picture{
+  width: 150rpx;
+  height: 100rpx;
+  border-radius: 16rpx;
+}
+
+.food_msg{
+  width: 330rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+.food_name{
+  line-height: 90rpx;
+  font-size: 39rpx;
+  font-weight: 600;
+}
+
+.food_explain{
+  line-height: 50rpx;
+  font-size: 30rpx;
+  background-color: #F5F5F5;
+  white-space: nowrap;
+}
+
+.food_sales{
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: gray;
+}
+
+.food_prise{
+  line-height: 50rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: red;
+}
+
+.right{
+  display: flex;
+  flex-direction: row;
+  height: 260rpx;
+  align-items:flex-end;
+  justify-content:flex-end; 
+}
+
+.minus{
+  margin-left: 30rpx;
+}
+
+.number{
+  margin-left: 13rpx;
+  margin-bottom: 16rpx;
+}
+
+.append{
+  margin-left: 13rpx;
+}
+
+.settle{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end; 
+  align-items:center;
+}
+
+.set{
+  width: 368rpx;
+}
+
+.prise_total{
+  line-height: 50rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: orange;
+}
+
+.setbutton{
+  background: orange;
+}

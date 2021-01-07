@@ -1,15 +1,16 @@
 {
   "pages":[
+    "pages/order/order",
     "pages/index/index",
-    "pages/list/list",
     "pages/logs/logs",
+    "pages/foodList/foodList",
     "pages/my/my",
     "pages/template/template",
     "pages/pay/pay"
   ],
   "permission": {
     "scope.userLocation": {
-      "desc": "是否允许小程序获取你的地理位置,如未允许将不能显示你的地理位置及查看商家的距离" 
+      "desc": "如未允许获取地理位置将不能显示你的地理位置及查看商家的距离" 
     }
   },
   "window":{
@@ -29,7 +30,7 @@
       "selectedIconPath": "/icon/select_home.png"
     },
   {
-    "pagePath": "pages/list/list",
+    "pagePath": "pages/order/order",
     "text": "订单",
     "iconPath": "/icon/form.png",
     "selectedIconPath": "/icon/select_form.png"

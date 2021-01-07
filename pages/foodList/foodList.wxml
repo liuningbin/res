@@ -1,0 +1,22 @@
+<view wx:for='{{food_list}}' wx:key='*this'>
+  <view class="food_list">
+    <view class="food_photo"><image class="food_picture" src="{{item.foodPhoto}}"></image></view>
+    <view class="food_msg">
+      <view class="food_name">{{item.foodName}}</view>
+      <view class="food_explain">{{item.foodExplain}}</view>
+      <view class="food_sales">月售{{item.foodSales}}</view>
+      <view class="food_prise">￥{{item.foodPrice}}</view>
+    </view>
+    <view class="right">
+      <view class="minus" bindtap="bindMinus" data-index="{{index}}"><image class="grade_img" src="https://liuningbin.oss-cn-hangzhou.aliyuncs.com/liuningbin/images/res_picture/food_picture/%E5%87%8F%E5%8F%B7.png" style="width:60rpx;height:60rpx;"></image></view>
+      <view class="number">{{item.number}}</view>
+      <view class="append" bindtap="bindAppend" data-index="{{index}}"><image class="grade_img" src="https://liuningbin.oss-cn-hangzhou.aliyuncs.com/liuningbin/images/res_picture/food_picture/%E5%8A%A0%E5%8F%B7.png" style="width:60rpx;height:60rpx;"></image></view>
+    </view>
+  </view>
+</view>
+<view class="settle">
+  <view class="prise_total">总金额:￥{{totalPrice}}</view>
+  <view class="set">
+  <button class="setbutton" bindtap="payment">结算</button>
+</view>
+</view>
